@@ -1,0 +1,110 @@
+
+.header {
+    background-color: #092341; 
+    padding: 20px 0;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  
+  nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  /* Nav Links Style */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links li {
+    font-size: 1.1rem;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: #FFB74D; /* Change color on hover */
+  }
+  
+  /* Hamburger Menu */
+  .hamburger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+  
+  .hamburger-menu div {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    border-radius: 5px;
+  }
+  
+  /* Mobile View - Media Query */
+  @media (max-width: 768px) {
+    /* Make the nav links hidden on small screens */
+    .nav-links {
+      display: none;
+      width: 100%;
+      background-color: #091b30;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      text-align: center;
+      padding: 10px 0;
+    }
+  
+    /* Show the hamburger menu */
+    .hamburger-menu {
+      display: flex;
+    }
+  
+    /* Show the nav links when the menu is open */
+    .nav-links.open {
+      display: block;
+    }
+  
+    /* Style for the mobile links */
+    .nav-links li {
+      font-size: 1.3rem;
+      margin: 10px 0;
+    }
+  
+    /* Links hover color change for mobile */
+    .nav-links a:hover {
+      color: #FFB74D;
+    }
+  }
+  
+  /* Larger screens (desktop) */
+  @media (min-width: 769px) {
+    .nav-links {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+  
