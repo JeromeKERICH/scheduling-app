@@ -1,9 +1,7 @@
-/* src/Components/CustomCalendar.css */
 
-/* Container for the calendar */
 .calendar-container {
     width: 100%;
-    max-width: 400px; /* Default max-width for smaller screens */
+    max-width: 400px; 
     margin: 20px auto;
     background-color: #fff;
     border-radius: 10px;
@@ -13,7 +11,7 @@
     transition: all 0.3s ease;
   }
   
-  /* Heading for the calendar */
+  
   .calendar-container h2 {
     font-size: 1.6rem;
     font-weight: 700;
@@ -22,7 +20,7 @@
     text-transform: uppercase;
   }
   
-  /* Style the calendar component */
+
   .react-calendar {
     width: 100%;
     border: none;
@@ -33,7 +31,7 @@
     transition: all 0.3s ease;
   }
   
-  /* Weekdays row */
+
   .react-calendar__month-view__weekdays {
     font-weight: bold;
     text-align: center;
@@ -42,7 +40,7 @@
     border-radius: 8px;
   }
   
-  /* Day button styling */
+  
   .react-calendar__tile {
     border-radius: 8px;
     transition: all 0.3s ease;

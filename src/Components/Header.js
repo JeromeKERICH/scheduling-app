@@ -1,6 +1,6 @@
-// src/components/Header.js
 import React, { useState } from 'react';
-import './Header.css';  // Add the CSS file for Header
+import { Link } from 'react-router-dom';
+import './Header.css';  
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,23 +9,25 @@ const Header = () => {
     setIsMenuOpen((prevState) => !prevState);
   };
 
+  // Close the menu when a link is clicked
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className="header">
       <div className="container">
         <h1 className="logo">My Scheduling App</h1>
         <nav>
-          {/* Hamburger menu */}
-          <div className="hamburger-menu" onClick={toggleMenu}>
+          <div className={`hamburger-menu ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
             <div></div>
             <div></div>
             <div></div>
           </div>
-          
-          {/* Navigation Links */}
           <ul className={`nav-links ${isMenuOpen ? 'open' : ''}`}>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/schedule">Schedule</a></li>
+            <li><a href="/" onClick={closeMenu}>Home</a></li>
+            <li><Link to="/about" onClick={closeMenu}>About</Link></li>
+            <li><a href="https://wa.me/254729353537" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>Chat with me</a></li>
           </ul>
         </nav>
       </div>

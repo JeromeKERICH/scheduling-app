@@ -1,11 +1,19 @@
 
 .header {
-    background-color: #092341; 
+    background-color: #092341;
     padding: 20px 0;
     color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; 
+    width: 100%; 
+    transition: top 0.3s; 
   }
   
+
   .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -15,6 +23,7 @@
     padding: 0 20px;
   }
   
+
   .logo {
     font-size: 1.5rem;
     font-weight: bold;
@@ -22,19 +31,21 @@
     text-transform: uppercase;
   }
   
+  
   nav {
     flex: 1;
     display: flex;
     justify-content: flex-end;
   }
   
-  /* Nav Links Style */
+
   .nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
   }
   
+
   .nav-links li {
     font-size: 1.1rem;
   }
@@ -46,12 +57,12 @@
   }
   
   .nav-links a:hover {
-    color: #FFB74D; /* Change color on hover */
+    color: #FFB74D; 
   }
   
-  /* Hamburger Menu */
+
   .hamburger-menu {
-    display: none;
+    display: none; 
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
@@ -64,9 +75,16 @@
     border-radius: 5px;
   }
   
-  /* Mobile View - Media Query */
+
   @media (max-width: 768px) {
-    /* Make the nav links hidden on small screens */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+  
+   
     .nav-links {
       display: none;
       width: 100%;
@@ -78,30 +96,30 @@
       padding: 10px 0;
     }
   
-    /* Show the hamburger menu */
+    
     .hamburger-menu {
       display: flex;
     }
   
-    /* Show the nav links when the menu is open */
+    
     .nav-links.open {
       display: block;
     }
   
-    /* Style for the mobile links */
+    
     .nav-links li {
       font-size: 1.3rem;
       margin: 10px 0;
     }
   
-    /* Links hover color change for mobile */
     .nav-links a:hover {
       color: #FFB74D;
     }
   }
   
-  /* Larger screens (desktop) */
+ 
   @media (min-width: 769px) {
+   
     .nav-links {
       display: flex;
       justify-content: flex-end;
